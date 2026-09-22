@@ -3,6 +3,8 @@ package samplearrays;
 public class DogShelter {
 
     // initialize an array of 3
+    static int[] dogCounts = new int[3]; //we use static so it can be used in the main method
+
 
 
     public static void main(String[] args) {
@@ -30,18 +32,26 @@ public class DogShelter {
     // Add count to a given index
     public static void addBreed(int index, int count) {
         // add you code here
+        if(index<dogCounts.length){  //we check if the value of index is valid
+            dogCounts[index]+=count; // we add the count for the particular breed at it's position
+        }
     }
 
     // Remove a breed by setting its count to 0
     public static void deleteBreed(int index) {
         // add your code here
+        if(index<dogCounts.length){ //we check if the value of index is valid
+            dogCounts[index]=0; //we put 0 in the index correspending to the breed
+        }
     }
 
     // Display all dog counts
     public static void displayDogs() {
         // add your code
           //  System.out.println("Breed " + i + " has " + dogCounts[i] + " dogs.");
-
+        for(int i=0;i<dogCounts.length;i++){
+            System.out.println("Breed " + i + " has " + dogCounts[i] + " dogs.");
+        }
     }
 }
 
