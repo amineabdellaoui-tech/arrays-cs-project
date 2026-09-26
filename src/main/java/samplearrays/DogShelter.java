@@ -32,7 +32,7 @@ public class DogShelter {
     // Add count to a given index
     public static void addBreed(int index, int count) {
         // add you code here
-        if(index<dogCounts.length){  //we check if the value of index is valid
+        if(index<dogCounts.length && index>=0){  //we check if the value of index is valid
             dogCounts[index]+=count; // we add the count for the particular breed at it's position
         }
     }
@@ -40,7 +40,7 @@ public class DogShelter {
     // Remove a breed by setting its count to 0
     public static void deleteBreed(int index) {
         // add your code here
-        if(index<dogCounts.length){ //we check if the value of index is valid
+        if(index<dogCounts.length && index>=0){ //we check if the value of index is valid
             dogCounts[index]=0; //we put 0 in the index correspending to the breed
         }
     }
